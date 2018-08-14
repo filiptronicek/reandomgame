@@ -1,0 +1,217 @@
+    <!DOCTYPE HTML>
+    <html lang="cs">
+    <head>
+        <meta charset="utf-8"/>
+        <title>(Vůbec ne)Random hra</title>
+        <style>
+  @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+             @import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+h1 {
+padding-top: 50px;
+font-family: 'Lato', sans-serif;
+text-align: center;
+font-size: 40px;
+}
+
+
+#playground{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: #e3e6ea;
+	width: 600px;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+}
+.hrac{
+	background: #000;
+	left: 285px;
+	top: 285px;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+.rndbod{
+	background: #008000;
+	left: 0;
+	top: 0;
+	position: absolute; 
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+}
+.score{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 2em;
+}
+.enemy{
+	background: #f00;
+	left: 94%;
+	top: 94%;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+.enemysecond{
+	background: #f00;
+	left: 1%;
+	top: 1%;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+#gamefield {
+  display: block;
+}
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+* {
+  box-sizing: border-box;
+}
+#gmvrmsg {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  span {
+    transform: skewX(15deg) 
+  }
+
+  span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+/**************SVG****************/
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+#pageBeginCountdown {
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+        </style>
+    </head>
+    <body>
+<div id="result"></div>
+
+        <div id="gameover">
+            
+        </div>
+        <div id="gamefield">
+        <div id="scoreboard">
+            <div class="score">Body: <span id="score">0</span></div>
+    <div class="row begin-countdown">
+      <div class="col-md-12 text-center">
+        <p> <progress value="60" max="60" id="pageBeginCountdown"></progress>
+ Hra končí za <span id="pageBeginCountdownText">60 </span> sekund</p>
+      </div>
+    </div>
+        <div id="game">
+            <div id="playground">
+                <div id="hrac" class="hrac"></div>
+                <div id="rndbod" class="rndbod"></div>
+                <div id="rndbodsec" class="rndbod"></div>
+                <div id="enemy" class="enemy"></div>
+                <div id="enemysecond" class="enemysecond"></div>
+            </div>
+        </div>
+    </div>
+   
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/random-hra.js"></script>
+    </body>
+    </html>
