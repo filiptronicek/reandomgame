@@ -1,3 +1,5 @@
+#Alternate default index pages
+DirectoryIndex countdown.html index.htm index.html index.php
 # DEFAULTS
 ServerSignature Off
 AddDefaultCharset UTF-8
