@@ -14,9 +14,6 @@ RewriteRule ^index\.html$ / [NC,R,L]
 
 DirectoryIndex index.html index.php
 
-# Redirect to WWW
-RewriteCond %{HTTP_HOST} ^serpentineseo.com
-RewriteRule (.*) http://www.serpentineseo.com/$1 [R=301,L]
 
 # Cache media files
 <filesMatch "\.(gif|jpg|jpeg|png|ico|swf|js)$">
