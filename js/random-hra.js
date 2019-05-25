@@ -4,16 +4,6 @@ if (highscore !== null) {
 	localStorage.setItem('highscore', 0);
 }
 
-//score popup (Tabulator)
-var modal = document.getElementById('myModal');
-
-$(document).on('keydown', function(e) {
-	e.preventDefault();
-	if (e.which == 9) {
-		modal.style.display = 'block';
-	}
-});
-
 $(document).on('keyup', function(e) {
 	e.preventDefault();
 	if (e.which == 9) {
@@ -23,22 +13,30 @@ $(document).on('keyup', function(e) {
 
 $(document).on('keydown', function(e) {
 	e.preventDefault();
-	if (e.which == 116 || e.whick == 13) {
+	if (e.which == 116) {
 		location.href = 'index.html';
 	}
 });
 
+//score popup (Tabulator)
+var modal = document.getElementById('myModal');
+
 var svg = $('#nextround');
+svg.hide();
+
 var msg;
 var gmfld = $('#gamefield');
 var gameover = document.getElementById('gameover');
 var nextround = document.getElementById('nextround');
 var stop = true;
+var logoCode = "<img src='assets/img/logo.png' width='100%' height='100%'>";
+var overTxt;
 
 var rndbodHeight = parseInt($('#rndbod').height()) / 2;
 var playgroundHeight = parseInt($('#playground').css('height'));
 var playgroundWidth = parseInt($('#playground').css('width'));
 
+var gameTime = 60; // in secs
 var rychlost = 10;
 var rychlostEnemy = 6;
 var enemyCountDown = 0;
@@ -47,11 +45,13 @@ var rndDir;
 var enemyCountDownSec = 0;
 var rndDirSec;
 
+$(document).on('keydown', function(e) {
+	e.preventDefault();
+	if (e.which == 9) {
+		modal.style.display = 'block';
+	}
+});
 $(document).ready(function() {
-	svg.hide();
-
-	// your code here
-
 	$('#rndbod').css('left', Math.floor(Math.random() * (playgroundWidth - rndbodHeight * 2)));
 	$('#rndbod').css('top', Math.floor(Math.random() * (playgroundHeight - rndbodHeight * 2)));
 
@@ -88,22 +88,23 @@ $(document).ready(function() {
 			if (!executed) {
 				executed = true;
 				// do something
+				overTxt =
+					"<h1> Game OVER </h1><br /> <p id='gmvrmsg'> In this round you got " + rndhra.score + ' points.';
 				if (rndhra.score < 35 && rndhra.score > 5) {
-					var msg =
-						"<img src='img/logo.png' width='100%' height='100%'><h1> Game OVER </h1><br /> <p id='gmvrmsg'> In this round you got " +
-						rndhra.score +
-						" points. That's not bad, but it can be better.";
+					var msg = logoCode + overTxt + "That's not bad, but it can be better.";
 				} else if (rndhra.score > 35) {
+					var msg = logoCode + overTxt + 'Very good result. Congratulations. ';
+				} else if (rndhra.score < 6 && rndhra.score != 1) {
+					var msg = logoCode + overTxt + ' Dude, what were you doing?! ';
+				} else if (rndhra.score == 1) {
 					var msg =
-						"<img src='assets/img/logo.png' width='100%' height='100%'><h1> Game OVER </h1><br /> <p id='gmvrmsg'> In this round you got " +
+						logoCode +
+						"<h1> Game OVER </h1><br /> <p id='gmvrmsg'> In this round you got just " +
 						rndhra.score +
-						' points. Very good result. Congratulations. ';
-				} else if (rndhra.score < 6) {
-					var msg =
-						"<img src='assets/img/logo.png' width='100%' height='100%'><h1> Game OVER </h1><br /> <p id='gmvrmsg'> In this round you got " +
-						rndhra.score +
-						' points. Dude, what were you doing?! ';
+						' point.' +
+						' Dude, what were you doing?! ';
 				}
+
 				svg.show();
 
 				gmfld.hide();
@@ -154,7 +155,7 @@ $(document).ready(function() {
 				rndhra.pressedKeys[KEY.RIGHT]) &&
 			stop
 		) {
-			ProgressCountdown(60, 'pageBeginCountdown', 'pageBeginCountdownText').then((value) => Fun());
+			ProgressCountdown(gameTime, 'pageBeginCountdown', 'pageBeginCountdownText').then((value) => Fun());
 			stop = false;
 		}
 		generate();

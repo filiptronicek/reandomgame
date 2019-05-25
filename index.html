@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="cs">
  <head> 
-  <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" /> 
-  <link rel="stylesheet" href="css/style.css" /> 
+      <meta charset="utf-8" /> 
+  <title>(Not at all) random game</title>   
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/index.html"><img src="assets/img/logo.png" height="40px"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Play</a></li>
+          <li><a href="extras/controls.html">Controls</a></li>
+          <li><a href="extras/countdown.html">Countdown</a></li>
+        </ul>
+      </div>
+    </nav>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css" /> 
  </head>
  <body>
-  <div id="container">
-   <a href="extras/ovladani.html" id="alerted"></a>
-  </div> 
-  <meta charset="utf-8" /> 
-  <title>(Not at all) random game</title>   
+
+<div id="container">
   <div id="myModal" class="modal"> 
    <!-- Modal content --> 
    <div class="modal-content"> 
     <p id="modaltext">Your score: 0</p> 
-    <img src="img/logo.png" width="25%" /> 
+    <img src="assets/img/logo.png" width="25%" /> 
    </div> 
   </div> 
   <div id="result"></div> 
@@ -53,16 +65,10 @@
      </div> 
     </div> 
    </div> 
+</div>
    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
-   <script>
-    
-</script> 
    <script src="js/random-hra.js"></script>  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
    <script type="text/javascript" src="maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
-   <script>
-
-</script> 
   </div>
  </body>
 </html>

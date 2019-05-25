@@ -2,22 +2,33 @@
 <html lang="en" >
 
 <head>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" height="40px"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Play</a></li>
+            <li class="active"><a href="#">Controls</a></li>
+            <li><a href="countdown.html">Countdown</a></li>
+          </ul>
+        </div>
+      </nav>
   <meta charset="UTF-8">
   <title>Ovládání hry | rEAndom game</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../css/controls.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
-  <h1>Jak se to ovládá | rEANdom game</h1>
+  <h1>Controls 101 | rEANdom game</h1>
 <div class="keyboard">
   <div class="keyboard__row keyboard__row--h1">
     <div data-key="27" class="key--word">
@@ -234,17 +245,18 @@
   </div>
 </div>
 
-<div id="vysvetlivky"> <p><kbd>Tab</kbd> - zobrazení skóre a highskóre </p>
-  <p><br/> Šipky - ovládání pohybu
-  </p><p><br /><kbd> F5</kbd> - Nová hra  </p> </div> 
+<div id="vysvetlivky"> <p><kbd>Tab</kbd> - show score &amp; highscore </p>
+  <p><br/> Arrows: Movement control
+  </p><p><br /><kbd> F5</kbd> - new game  </p> </div> 
   
   
 
-    <script  src="js/index.js"></script>
+    <script  src="../js/controls.js"></script>
 
 
 
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>
