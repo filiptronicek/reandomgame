@@ -125,6 +125,8 @@ body {
 }
 
 .cta:hover {
+	text-decoration: none;
+	color: white;
 	transition: 0.5s;
 	box-shadow: 10px 10px 0 #fbc638;
 }
