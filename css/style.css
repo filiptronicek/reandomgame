@@ -33,7 +33,15 @@ nav {
 }
 
 
+/* Modal Content */
 
+.modal-content {
+    background-color: var(--playground-color);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
 
 
 #alerted:visited {
@@ -256,15 +264,7 @@ path.two {
 }
 
 
-/* Modal Content */
 
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
 
 #modaltext {
     font-family: 'Roboto Condensed', sans-serif;
