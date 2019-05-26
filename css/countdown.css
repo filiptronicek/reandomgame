@@ -1,18 +1,43 @@
-body.dark-mode {
-    background-color: #222222;
-    color: #eee;
+:root,
+[data-theme="dark"] {
+    --color: hsl(0, 0%, 100%);
+    --color-bg: hsl(240, 8%, 12%);
+    --playground-color: #25272a;
+    --player-color: #fff;
+    --secondary: #353c45;
+
 }
 
-body.dark-mode a {
-    color: #111;
+:root,
+[data-theme="default"] {
+    --color-bg: hsl(0, 0%, 100%);
+    --color: hsl(240, 8%, 12%);
+    --playground-color: #e3e6ea;
+    --player-color: #000;
+    --secondary: #f8f8f8;
 }
 
-body.light-mode {
+[data-theme] {
+    background-color: var(--color-bg) !important;
+    color: var(--color) !important;
+
+}
+
+nav {
+    background: var(--secondary) !important;
+}
+
+nav li a {
+    color: var(--color) !important;
+}
+
+
+body {
     background-color: #eee;
     color: #111;
 }
 
-body.light-mode a {
+body a {
     color: #111;
 }
 

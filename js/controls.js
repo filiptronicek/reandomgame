@@ -1,4 +1,4 @@
-        function getKey (e) {
+        function getKey(e) {
             var location = e.location;
             var selector;
             if (location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
@@ -13,7 +13,7 @@
             return document.querySelector(selector);
         }
 
-        function pressKey (char) {
+        function pressKey(char) {
             var key = document.querySelector('[data-char*="' + char.toUpperCase() + '"]');
             if (!key) {
                 return console.warn('No key for', char);
@@ -28,7 +28,7 @@
         var originalQueue = h1.innerHTML;
         var queue = h1.innerHTML;
 
-        function next () {
+        function next() {
             var c = queue[0];
             queue = queue.slice(1);
             h1.innerHTML = originalQueue.slice(0, originalQueue.length - queue.length);
@@ -55,7 +55,7 @@
             key && key.removeAttribute('data-pressed');
         });
 
-        function size () {
+        function size() {
             var size = keyboard.parentNode.clientWidth / 90;
             keyboard.style.fontSize = size + 'px';
             console.log(size);
@@ -66,3 +66,11 @@
             size();
         });
         size();
+
+        function initTheme() {
+            var darkThemeSelected =
+                localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'dark';
+            // update body data-theme attribute
+            darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
+        }
+        initTheme(); // if user has already selected a specific theme -> apply it

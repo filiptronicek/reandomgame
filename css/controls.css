@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
 
+:root,
+[data-theme="dark"] {
+	--color: hsl(0, 0%, 100%);
+	--color-bg: hsl(240, 8%, 12%);
+	--playground-color: #25272a;
+	--player-color: #fff;
+	--secondary: #353c45;
+
+}
+
+:root,
+[data-theme="default"] {
+	--color-bg: hsl(0, 0%, 100%);
+	--color: hsl(240, 8%, 12%);
+	--playground-color: #e3e6ea;
+	--player-color: #000;
+	--secondary: #f8f8f8;
+}
+
+[data-theme] {
+	background-color: var(--color-bg) !important;
+	color: var(--color) !important;
+
+}
+
+nav {
+	background: var(--secondary) !important;
+}
+
+nav li a {
+	color: var(--color) !important;
+}
+
 h1 {
 	text-align: center;
 	font-size: 1.8em;
@@ -28,7 +61,7 @@ h1 {
 	height: 3.3em;
 }
 
-.keyboard__row > * {
+.keyboard__row>* {
 	position: relative;
 	background: #333;
 	text-align: center;
@@ -47,12 +80,12 @@ h1 {
 	border-bottom-color: #555;
 }
 
-.keyboard__row--h1 > div {
+.keyboard__row--h1>div {
 	width: 3.5em;
 }
 
-.keyboard__row > div[data-pressed],
-.keyboard__row > div:active {
+.keyboard__row>div[data-pressed],
+.keyboard__row>div:active {
 	background: #2a2a2a;
 	color: #aaa;
 	position: relative;
@@ -80,7 +113,7 @@ h1 {
 	width: 18em;
 }
 
-.key--double > * {
+.key--double>* {
 	padding-top: 0.1em;
 }
 
@@ -88,21 +121,21 @@ h1 {
 	line-height: 2.8em;
 }
 
-.key--bottom-left > * {
+.key--bottom-left>* {
 	position: absolute;
 	text-align: left;
 	bottom: 0.4em;
 	left: 0.4em;
 }
 
-.key--bottom-right > * {
+.key--bottom-right>* {
 	position: absolute;
 	text-align: right;
 	bottom: 0.4em;
 	right: 0.4em;
 }
 
-.key--fn > * {
+.key--fn>* {
 	font-size: 0.6em;
 	line-height: 1em;
 	padding-top: 1.2em;
@@ -111,12 +144,12 @@ h1 {
 	float: right;
 }
 
-.key--word > * {
+.key--word>* {
 	font-size: 0.8em;
 }
 
-.key--arrow--tall > *,
-.key--arrow > * {
+.key--arrow--tall>*,
+.key--arrow>* {
 	font-size: 0.5em;
 	line-height: 3em;
 }
@@ -127,13 +160,14 @@ h1 {
 	line-height: 0.5em;
 }
 
-.key--arrow--tall > * {
+.key--arrow--tall>* {
 	padding-top: 0.2em;
 }
 
-.keyboard > .keyboard__row {
+.keyboard>.keyboard__row {
 	text-align: center;
 }
+
 #vysvetlivky {
 	font-family: 'Do Hyeon', sans-serif;
 	text-align: center;

@@ -159,18 +159,38 @@ label {
 [data-theme="dark"] {
    --color: hsl(0, 0%, 100%);
    --color-bg: hsl(240, 8%, 12%);
+   --playground-color: #25272a;
+   --player-color: #fff;
+   --secondary: #353c45;
+
+
+}
+
+:root,
+[data-theme="default"] {
+   --color-bg: hsl(0, 0%, 100%);
+   --color: hsl(240, 8%, 12%);
+   --playground-color: #e3e6ea;
+   --player-color: #000;
+   --secondary: #f8f8f8;
+
 }
 
 [data-theme] {
    background-color: var(--color-bg) !important;
    color: var(--color) !important;
+
 }
 
-@supports (--css: variables) {
-   [data-theme="default"] {
-      --color-bg: hsl(0, 0%, 100%);
-      --color: hsl(240, 8%, 12%);
-   }
+nav {
+   position: absolute !important;
+   top: 0% !important;
+   left: 0% !important;
+   background: var(--secondary) !important;
+}
+
+nav li a {
+   color: var(--color) !important;
 }
 
 label {
