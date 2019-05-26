@@ -1,257 +1,262 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" height="40px"></a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li><a href="../index.html">Play</a></li>
-            <li class="active"><a href="#">Controls</a></li>
-            <li><a href="countdown.html">Countdown</a></li>
-          </ul>
-        </div>
-      </nav>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" height="40px"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">Play</a></li>
+        <li class="active"><a href="#">Controls</a></li>
+        <li><a href="countdown.html">Countdown</a></li>
+        <li><a href="../settings.html">Settings</a></li>
+
+      </ul>
+    </div>
+  </nav>
   <meta charset="UTF-8">
   <title>Ovládání hry | rEAndom game</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-  
-      <link rel="stylesheet" href="../css/controls.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../css/controls.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 
 <body>
 
   <h1>Controls 101 | rEANdom game</h1>
-<div class="keyboard">
-  <div class="keyboard__row keyboard__row--h1">
-    <div data-key="27" class="key--word">
-      <span>esc</span>
+  <div class="keyboard">
+    <div class="keyboard__row keyboard__row--h1">
+      <div data-key="27" class="key--word">
+        <span>esc</span>
+      </div>
+      <div data-key="112" class="key--fn op">
+        <span>F1</span>
+      </div>
+      <div data-key="113" class="key--fn op">
+        <span>F2</span>
+      </div>
+      <div data-key="114" class="key--fn op">
+        <span>F3</span>
+      </div>
+      <div data-key="115" class="key--fn op">
+        <span>F4</span>
+      </div>
+      <div data-key="116" class="key--fn f5">
+        <span>F5</span>
+      </div>
+      <div data-key="117" class="key--fn op">
+        <span>F6</span>
+      </div>
+      <div data-key="118" class="key--fn op">
+        <span>F7</span>
+      </div>
+      <div data-key="119" class="key--fn op">
+        <span>F8</span>
+      </div>
+      <div data-key="120" class="key--fn op">
+        <span>F9</span>
+      </div>
+      <div data-key="121" class="key--fn op">
+        <span>F10</span>
+      </div>
+      <div data-key="122" class="key--fn op">
+        <span>F11</span>
+      </div>
+      <div data-key="123" class="key--fn op">
+        <span>F12</span>
+      </div>
+      <div data-key="n/a" class="key--word op">
+        <span>pwr</span>
+      </div>
     </div>
-    <div data-key="112" class="key--fn op">
-      <span>F1</span>
+    <div class="keyboard__row">
+      <div class="key--doubl op" data-key="192">
+        <div>~</div>
+        <div>`</div>
+      </div>
+      <div class="key--double op" data-key="49">
+        <div>!</div>
+        <div>1</div>
+      </div>
+      <div class="key--double op" data-key="50">
+        <div>@</div>
+        <div>2</div>
+      </div>
+      <div class="key--double op" data-key="51">
+        <div>#</div>
+        <div>3</div>
+      </div>
+      <div class="key--double op" data-key="52">
+        <div>$</div>
+        <div>4</div>
+      </div>
+      <div class="key--double op" data-key="53">
+        <div>%</div>
+        <div>5</div>
+      </div>
+      <div class="key--double op" data-key="54">
+        <div>^</div>
+        <div>6</div>
+      </div>
+      <div class="key--double op" data-key="55">
+        <div>&</div>
+        <div>7</div>
+      </div>
+      <div class="key--double op" data-key="56">
+        <div>*</div>
+        <div>8</div>
+      </div>
+      <div class="key--double op" data-key="57">
+        <div>(</div>
+        <div>9</div>
+      </div>
+      <div class="key--double op" data-key="48">
+        <div>)</div>
+        <div>0</div>
+      </div>
+      <div class="key--double op" data-key="189">
+        <div>_</div>
+        <div>-</div>
+      </div>
+      <div class="key--double op" data-key="187">
+        <div>+</div>
+        <div>=</div>
+      </div>
+      <div class="key--bottom-right key--word key--w4 op" data-key="8">
+        <span>delete</span>
+      </div>
     </div>
-    <div data-key="113" class="key--fn op">
-      <span>F2</span>
+    <div class="keyboard__row">
+      <div class="key--bottom-left key--word key--w4 tab" data-key="9">
+        <span>tab</span>
+      </div>
+      <div class="key--letter op" data-char="Q">Q</div>
+      <div class="key--letter op" data-char="W">W</div>
+      <div class="key--letter op" data-char="E">E</div>
+      <div class="key--letter op" data-char="R">R</div>
+      <div class="key--letter op" data-char="T">T</div>
+      <div class="key--letter op" data-char="Y">Y</div>
+      <div class="key--letter op" data-char="U">U</div>
+      <div class="key--letter op" data-char="I">I</div>
+      <div class="key--letter op" data-char="O">O</div>
+      <div class="key--letter op" data-char="P">P</div>
+      <div class="key--double op" data-key="219" data-char="{[">
+        <div>{</div>
+        <div>[</div>
+      </div>
+      <div class="key--double op" data-key="221" data-char="}]">
+        <div>}</div>
+        <div>]</div>
+      </div>
+      <div class="key--double op" data-key="220" data-char="|\">
+        <div>|</div>
+        <div>\</div>
+      </div>
     </div>
-    <div data-key="114" class="key--fn op">
-      <span>F3</span>
+    <div class="keyboard__row">
+      <div class="key--bottom-left key--word key--w5 op" data-key="20">
+        <span>caps lock</span>
+      </div>
+      <div class="key--letter op" data-char="A">A</div>
+      <div class="key--letter op" data-char="S">S</div>
+      <div class="key--letter op" data-char="D">D</div>
+      <div class="key--letter op" data-char="F">F</div>
+      <div class="key--letter op" data-char="G">G</div>
+      <div class="key--letter op" data-char="H">H</div>
+      <div class="key--letter op" data-char="J">J</div>
+      <div class="key--letter op" data-char="K">K</div>
+      <div class="key--letter op" data-char="L">L</div>
+      <div class="key--double op" data-key="186">
+        <div>:</div>
+        <div>;</div>
+      </div>
+      <div class="key--double op" data-key="222">
+        <div>"</div>
+        <div>'</div>
+      </div>
+      <div class="key--bottom-right key--word key--w5 op" data-key="13">
+        <span>return</span>
+      </div>
     </div>
-    <div data-key="115" class="key--fn op">
-      <span>F4</span>
+    <div class="keyboard__row">
+      <div class="key--bottom-left key--word key--w6 op" data-key="16">
+        <span>shift</span>
+      </div>
+      <div class="key--letter op" data-char="Z">Z</div>
+      <div class="key--letter op" data-char="X">X</div>
+      <div class="key--letter op" data-char="C">C</div>
+      <div class="key--letter op" data-char="V">V</div>
+      <div class="key--letter op" data-char="B">B</div>
+      <div class="key--letter op" data-char="N">N</div>
+      <div class="key--letter op" data-char="M">M</div>
+      <div class="key--double op" data-key="188">
+        <div>&lt;</div>
+        <div>,</div>
+      </div>
+      <div class="key--double op" data-key="190">
+        <div>&gt;</div>
+        <div>.</div>
+      </div>
+      <div class="key--double op" data-key="191">
+        <div>?</div>
+        <div>/</div>
+      </div>
+      <div class="key--bottom-right key--word key--w6 op" data-key="16-R">
+        <span>shift</span>
+      </div>
     </div>
-    <div data-key="116" class="key--fn f5">
-      <span>F5</span>
-    </div>
-    <div data-key="117" class="key--fn op">
-      <span>F6</span>
-    </div>
-    <div data-key="118" class="key--fn op">
-      <span>F7</span>
-    </div>
-    <div data-key="119" class="key--fn op">
-      <span>F8</span>
-    </div>
-    <div data-key="120" class="key--fn op">
-      <span>F9</span>
-    </div>
-    <div data-key="121" class="key--fn op">
-      <span>F10</span>
-    </div>
-    <div data-key="122" class="key--fn op">
-      <span>F11</span>
-    </div>
-    <div data-key="123" class="key--fn op">
-      <span>F12</span>
-    </div>
-    <div data-key="n/a" class="key--word op">
-      <span>pwr</span>
+    <div class="keyboard__row keyboard__row--h3">
+      <div class="key--bottom-left key--word op">
+        <span>fn</span>
+      </div>
+      <div class="key--bottom-left key--word key--w1 op" data-key="17">
+        <span>control</span>
+      </div>
+      <div class="key--bottom-left key--word key--w1 op" data-key="18">
+        <span>option</span>
+      </div>
+      <div class="key--bottom-right key--word key--w3 op" data-key="91">
+        <span>command</span>
+      </div>
+      <div class="key--double key--right key--space op" data-key="32" data-char=" ">
+        &nbsp;
+      </div>
+      <div class="key--bottom-left key--word key--w3 op" data-key="93-R">
+        <span>command</span>
+      </div>
+      <div class="key--bottom-left key--word key--w1 op" data-key="18-R">
+        <span>option</span>
+      </div>
+      <div data-key="37" class="keypad key--arrow">
+        <span>&#9664;</span>
+      </div>
+      <div class="keypad key--double key--arrow--tall" data-key="38">
+        <div>&#9650;</div>
+        <div>&#9660;</div>
+      </div>
+      <div data-key="39" class="keypad key--arrow">
+        <span>&#9654;</span>
+      </div>
     </div>
   </div>
-  <div class="keyboard__row">
-    <div class="key--doubl op" data-key="192">
-      <div>~</div>
-      <div>`</div>
-    </div>
-    <div class="key--double op" data-key="49">
-      <div>!</div>
-      <div>1</div>
-    </div>
-    <div class="key--double op" data-key="50">
-      <div>@</div>
-      <div>2</div>
-    </div>
-    <div class="key--double op" data-key="51">
-      <div>#</div>
-      <div>3</div>
-    </div>
-    <div class="key--double op" data-key="52">
-      <div>$</div>
-      <div>4</div>
-    </div>
-    <div class="key--double op" data-key="53">
-      <div>%</div>
-      <div>5</div>
-    </div>
-    <div class="key--double op" data-key="54">
-      <div>^</div>
-      <div>6</div>
-    </div>
-    <div class="key--double op" data-key="55">
-      <div>&</div>
-      <div>7</div>
-    </div>
-    <div class="key--double op" data-key="56">
-      <div>*</div>
-      <div>8</div>
-    </div>
-    <div class="key--double op" data-key="57">
-      <div>(</div>
-      <div>9</div>
-    </div>
-    <div class="key--double op" data-key="48">
-      <div>)</div>
-      <div>0</div>
-    </div>
-    <div class="key--double op" data-key="189">
-      <div>_</div>
-      <div>-</div>
-    </div>
-    <div class="key--double op" data-key="187">
-      <div>+</div>
-      <div>=</div>
-    </div>
-    <div class="key--bottom-right key--word key--w4 op" data-key="8">
-      <span>delete</span>
-    </div>
-  </div>
-  <div class="keyboard__row">
-    <div class="key--bottom-left key--word key--w4 tab" data-key="9">
-      <span>tab</span>
-    </div>
-    <div class="key--letter op" data-char="Q">Q</div>
-    <div class="key--letter op" data-char="W">W</div>
-    <div class="key--letter op" data-char="E">E</div>
-    <div class="key--letter op" data-char="R">R</div>
-    <div class="key--letter op" data-char="T">T</div>
-    <div class="key--letter op" data-char="Y">Y</div>
-    <div class="key--letter op" data-char="U">U</div>
-    <div class="key--letter op" data-char="I">I</div>
-    <div class="key--letter op" data-char="O">O</div>
-    <div class="key--letter op" data-char="P">P</div>
-    <div class="key--double op" data-key="219" data-char="{[">
-      <div>{</div>
-      <div>[</div>
-    </div>
-    <div class="key--double op" data-key="221" data-char="}]">
-      <div>}</div>
-      <div>]</div>
-    </div>
-    <div class="key--double op" data-key="220" data-char="|\">
-      <div>|</div>
-      <div>\</div>
-    </div>
-  </div>
-  <div class="keyboard__row">
-    <div class="key--bottom-left key--word key--w5 op" data-key="20">
-      <span>caps lock</span>
-    </div>
-    <div class="key--letter op" data-char="A">A</div>
-    <div class="key--letter op" data-char="S">S</div>
-    <div class="key--letter op" data-char="D">D</div>
-    <div class="key--letter op" data-char="F">F</div>
-    <div class="key--letter op" data-char="G">G</div>
-    <div class="key--letter op" data-char="H">H</div>
-    <div class="key--letter op" data-char="J">J</div>
-    <div class="key--letter op" data-char="K">K</div>
-    <div class="key--letter op" data-char="L">L</div>
-    <div class="key--double op" data-key="186">
-      <div>:</div>
-      <div>;</div>
-    </div>
-    <div class="key--double op" data-key="222">
-      <div>"</div>
-      <div>'</div>
-    </div>
-    <div class="key--bottom-right key--word key--w5 op" data-key="13">
-      <span>return</span>
-    </div>
-  </div>
-  <div class="keyboard__row">
-    <div class="key--bottom-left key--word key--w6 op" data-key="16">
-      <span>shift</span>
-    </div>
-    <div class="key--letter op" data-char="Z">Z</div>
-    <div class="key--letter op" data-char="X">X</div>
-    <div class="key--letter op" data-char="C">C</div>
-    <div class="key--letter op" data-char="V">V</div>
-    <div class="key--letter op" data-char="B">B</div>
-    <div class="key--letter op" data-char="N">N</div>
-    <div class="key--letter op" data-char="M">M</div>
-    <div class="key--double op" data-key="188">
-      <div>&lt;</div>
-      <div>,</div>
-    </div>
-    <div class="key--double op" data-key="190">
-      <div>&gt;</div>
-      <div>.</div>
-    </div>
-    <div class="key--double op" data-key="191">
-      <div>?</div>
-      <div>/</div>
-    </div>
-    <div class="key--bottom-right key--word key--w6 op" data-key="16-R">
-      <span>shift</span>
-    </div>
-  </div>
-  <div class="keyboard__row keyboard__row--h3">
-    <div class="key--bottom-left key--word op">
-      <span>fn</span>
-    </div>
-    <div class="key--bottom-left key--word key--w1 op" data-key="17">
-      <span>control</span>
-    </div>
-    <div class="key--bottom-left key--word key--w1 op" data-key="18">
-      <span>option</span>
-    </div>
-    <div class="key--bottom-right key--word key--w3 op" data-key="91">
-      <span>command</span>
-    </div>
-    <div class="key--double key--right key--space op" data-key="32" data-char=" ">
-      &nbsp;
-    </div>
-    <div class="key--bottom-left key--word key--w3 op" data-key="93-R">
-      <span>command</span>
-    </div>
-    <div class="key--bottom-left key--word key--w1 op" data-key="18-R">
-      <span>option</span>
-    </div>
-    <div data-key="37" class="keypad key--arrow">
-      <span>&#9664;</span>
-    </div>
-    <div class="keypad key--double key--arrow--tall" data-key="38">
-      <div>&#9650;</div>
-      <div>&#9660;</div>
-    </div>
-    <div data-key="39" class="keypad key--arrow">
-      <span>&#9654;</span>
-    </div>
-  </div>
-</div>
 
-<div id="vysvetlivky"> <p><kbd>Tab</kbd> - show score &amp; highscore </p>
-  <p><br/> Arrows: Movement control
-  </p><p><br /><kbd> F5</kbd> - new game  </p> </div> 
-  
-  
+  <div id="vysvetlivky">
+    <p><kbd>Tab</kbd> - show score &amp; highscore </p>
+    <p><br /> Arrows: Movement control
+    </p>
+    <p><br /><kbd> F5</kbd> - new game </p>
+  </div>
 
-    <script  src="../js/controls.js"></script>
+
+
+  <script src="../js/controls.js"></script>
 
 
 
@@ -259,4 +264,5 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </html>

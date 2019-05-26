@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index.html"><img src="assets/img/logo.png" height="40px"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Play</a></li>
+            <li><a href="extras/controls.html">Controls</a></li>
+            <li><a href="extras/countdown.html">Countdown</a></li>
+            <li class="active"><a href="#">Settings</a></li>
+
+        </ul>
+    </div>
+</nav>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <br>
+        <br>
+        <div id="settings">
+        <label>
+        Sound:
+    </label>
+    <div id="toggles">
+        <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" onclick="saveSettings(this, 'sound')"/>
+        <label for="checkbox3" class="checkbox-label" data-off="On" data-on="Off"></label>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/settings.js" async defer></script>
+</body>
+
+</html>

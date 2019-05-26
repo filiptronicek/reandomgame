@@ -1,4 +1,4 @@
-console.log(localStorage.mute)
+console.log(localStorage.mute);
 if (highscore !== null) {
 	var highscore = localStorage.getItem('highscore');
 } else {
@@ -32,6 +32,13 @@ var nextround = document.getElementById('nextround');
 var stop = true;
 var logoCode = "<img src='assets/img/logo.png' width='100%' height='100%'>";
 var overTxt;
+if (localStorage.mute !== "true") {
+	var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
+	var point = new Audio('./assets/sounds/Laser_Gun.wav');
+} else {
+	var gameoversound = new Audio();
+	var point = new Audio();
+}
 
 var rndbodHeight = parseInt($('#rndbod').height()) / 2;
 var playgroundHeight = parseInt($('#playground').css('height'));
@@ -132,8 +139,8 @@ $(document).ready(function () {
 				rychlost = 0;
 				rychlostEnemy = 0;
 				stop = true;
-				var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
-				gameoversound.play();
+
+				if (localStorage.mute !== "true") gameoversound.play();
 				console.log('Game Over');
 				var score = rndhra.score;
 
@@ -230,7 +237,6 @@ $(document).ready(function () {
 
 		var playgroundHeight = parseInt($('#playground').css('height'));
 		var playgroundWidth = parseInt($('#playground').css('width'));
-		var point = new Audio('./assets/sounds/Laser_Gun.wav'); 
 
 		if (
 			Math.abs(hracLeft + hracHeight - (rndbodLeft + rndbodHeight)) <= rndbodHeight + hracHeight &&
@@ -240,7 +246,7 @@ $(document).ready(function () {
 			document.getElementById('modaltext').innerHTML =
 				'Your score: ' + rndhra.score + '<br /> Your highscore: ' + highscore;
 
-			point.play();
+			if (localStorage.mute !== "true") point.play();
 
 			$('#score').html(rndhra.score);
 			$('#rndbod').css('left', Math.floor(Math.random() * (playgroundWidth - rndbodHeight * 2)));
@@ -254,7 +260,7 @@ $(document).ready(function () {
 			rndhra.score++;
 			document.getElementById('modaltext').innerHTML =
 				'Your score: ' + rndhra.score + '<br /> Your highscore: ' + highscore;
-			point.play();
+			if (localStorage.mute !== "true") point.play();
 
 			$('#score').html(rndhra.score);
 			$('#rndbodsec').css('left', Math.floor(Math.random() * (playgroundWidth - rndbodHeight * 2)));
