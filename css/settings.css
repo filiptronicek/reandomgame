@@ -127,6 +127,24 @@ body *,
    color: #1fc1c8;
 }
 
+#themeSwitch:checked+.checkbox-label:after {
+   color: #1fc1c8;
+}
+
+#themeSwitch+.checkbox-label {
+   /*box-shadow*/
+   -webkit-box-shadow: inset 0 0 0 0px #1fc1c8, 0 0 0 2px lightgreen;
+   -moz-box-shadow: inset 0 0 0 0px #1fc1c8, 0 0 0 2px lightgreen;
+   box-shadow: inset 0 0 0 0px #1fc1c8, 0 0 0 2px lightgreen;
+}
+
+#themeSwitch:checked+.checkbox-label {
+   /*box-shadow*/
+   -webkit-box-shadow: inset 0 0 0 20px #1fc1c8, 0 0 0 2px #1fc1c8;
+   -moz-box-shadow: inset 0 0 0 20px #1fc1c8, 0 0 0 2px #1fc1c8;
+   box-shadow: inset 0 0 0 20px #1fc1c8, 0 0 0 2px #1fc1c8;
+}
+
 #settings {
    width: 100vw;
    max-width: 100%;
@@ -137,3 +155,20 @@ body *,
 label {
 }
 */
+:root,
+[data-theme="dark"] {
+   --color: hsl(0, 0%, 100%);
+   --color-bg: hsl(240, 8%, 12%);
+}
+
+[data-theme] {
+   background-color: var(--color-bg) !important;
+   color: var(--color) !important;
+}
+
+@supports (--css: variables) {
+   [data-theme="default"] {
+      --color-bg: hsl(0, 0%, 100%);
+      --color: hsl(240, 8%, 12%);
+   }
+}

@@ -29,21 +29,32 @@
     </div>
 </nav>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <br>
-        <br>
-        <div id="settings">
+    <br>
+    <br>
+    <div id="settings">
         <label>
-        Sound:
-    </label>
-    <div id="toggles">
-        <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" onclick="saveSettings(this, 'sound')"/>
-        <label for="checkbox3" class="checkbox-label" data-off="On" data-on="Off"></label>
+            Sound:
+        </label>
+        <div id="toggles">
+            <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle"
+                onclick="saveSettings(this, 'sound')" />
+            <label for="checkbox3" class="checkbox-label" data-off="On" data-on="Off"></label>
+
+        </div>
+        <label>
+            Theme:
+        </label>
+        <div id="toggles">
+            <input type="checkbox" name="checkbox1" id="themeSwitch" class="ios-toggle"
+                onclick="saveSettings(this, 'sound')" />
+            <label for="themeSwitch" class="checkbox-label" data-off="Light" data-on="Dark"></label>
+        </div>
     </div>
-</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="js/settings.js" async defer></script>

@@ -32,13 +32,7 @@ var nextround = document.getElementById('nextround');
 var stop = true;
 var logoCode = "<img src='assets/img/logo.png' width='100%' height='100%'>";
 var overTxt;
-if (localStorage.mute !== "true") {
-	var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
-	var point = new Audio('./assets/sounds/Laser_Gun.wav');
-} else {
-	var gameoversound = new Audio();
-	var point = new Audio();
-}
+
 
 var rndbodHeight = parseInt($('#rndbod').height()) / 2;
 var playgroundHeight = parseInt($('#playground').css('height'));
@@ -66,8 +60,12 @@ function mutePage() {
 		muteMe(elem);
 	});
 }
-if (localStorage.mute == "true") {
-	mutePage();
+if (localStorage.mute !== "true") {
+	var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
+	var point = new Audio('./assets/sounds/Laser_Gun.wav');
+} else {
+	var gameoversound = new Audio();
+	var point = new Audio();
 }
 
 
@@ -395,4 +393,14 @@ $(document).ready(function () {
 }); //konec funkce document.ready v jQuery
 function refresh() {
 	window.location = window.location;
+}
+// Theme switch
+
+initTheme(); // if user has already selected a specific theme -> apply it
+
+function initTheme() {
+	var darkThemeSelected =
+		localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'dark';
+	// update body data-theme attribute
+	darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
 }
