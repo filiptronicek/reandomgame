@@ -1,17 +1,18 @@
+console.log(localStorage.mute)
 if (highscore !== null) {
 	var highscore = localStorage.getItem('highscore');
 } else {
 	localStorage.setItem('highscore', 0);
 }
 
-$(document).on('keyup', function(e) {
+$(document).on('keyup', function (e) {
 	e.preventDefault();
 	if (e.which == 9) {
 		modal.style.display = 'none';
 	}
 });
 
-$(document).on('keydown', function(e) {
+$(document).on('keydown', function (e) {
 	e.preventDefault();
 	if (e.which == 116) {
 		location.href = 'index.html';
@@ -45,13 +46,31 @@ var rndDir;
 var enemyCountDownSec = 0;
 var rndDirSec;
 
-$(document).on('keydown', function(e) {
+function muteMe(elem) {
+	elem.muted = true;
+	elem.pause();
+}
+
+// Try to mute all video and audio elements on the page
+function mutePage() {
+	var elems = document.querySelectorAll("video, audio");
+
+	[].forEach.call(elems, function (elem) {
+		muteMe(elem);
+	});
+}
+if (localStorage.mute == "true") {
+	mutePage();
+}
+
+
+$(document).on('keydown', function (e) {
 	e.preventDefault();
 	if (e.which == 9) {
 		modal.style.display = 'block';
 	}
 });
-$(document).ready(function() {
+$(document).ready(function () {
 	$('#rndbod').css('left', Math.floor(Math.random() * (playgroundWidth - rndbodHeight * 2)));
 	$('#rndbod').css('top', Math.floor(Math.random() * (playgroundHeight - rndbodHeight * 2)));
 
@@ -72,19 +91,19 @@ $(document).ready(function() {
 
 	generate();
 
-	$(function() {
+	$(function () {
 		rndhra.timer = setInterval(gameloop, 30);
-		$(document).keydown(function(e) {
+		$(document).keydown(function (e) {
 			rndhra.pressedKeys[e.which] = true;
 		});
-		$(document).keyup(function(e) {
+		$(document).keyup(function (e) {
 			rndhra.pressedKeys[e.which] = false;
 		});
 	});
 
-	var Fun = (function() {
+	var Fun = (function () {
 		var executed = false;
-		return function() {
+		return function () {
 			if (!executed) {
 				executed = true;
 				// do something
@@ -122,8 +141,7 @@ $(document).ready(function() {
 					if (score > highscore) {
 						localStorage.setItem('highscore', score);
 						alert('You have a new highscore: ' + score + ' your previous highscore was: ' + highscore);
-					} else {
-					}
+					} else {}
 				} else {
 					localStorage.setItem('highscore', score);
 				}
@@ -212,6 +230,7 @@ $(document).ready(function() {
 
 		var playgroundHeight = parseInt($('#playground').css('height'));
 		var playgroundWidth = parseInt($('#playground').css('width'));
+		var point = new Audio('./assets/sounds/Laser_Gun.wav'); 
 
 		if (
 			Math.abs(hracLeft + hracHeight - (rndbodLeft + rndbodHeight)) <= rndbodHeight + hracHeight &&
@@ -220,7 +239,7 @@ $(document).ready(function() {
 			rndhra.score++;
 			document.getElementById('modaltext').innerHTML =
 				'Your score: ' + rndhra.score + '<br /> Your highscore: ' + highscore;
-			var point = new Audio('Laser_Gun.wav'); // buffers automatically when created
+
 			point.play();
 
 			$('#score').html(rndhra.score);
@@ -235,7 +254,6 @@ $(document).ready(function() {
 			rndhra.score++;
 			document.getElementById('modaltext').innerHTML =
 				'Your score: ' + rndhra.score + '<br /> Your highscore: ' + highscore;
-			var point = new Audio('Laser_Gun.wav'); // buffers automatically when created
 			point.play();
 
 			$('#score').html(rndhra.score);
