@@ -178,7 +178,7 @@ $(document).ready(function () {
 				rndhra.pressedKeys[KEY.RIGHT]) &&
 			stop
 		) {
-			ProgressCountdown(gameTime, 'pageBeginCountdown', 'pageBeginCountdownText').then((value) => Fun());
+			ProgressCountdown(gameTime, 'pageBeginCountdown', 'pageBeginCountdownText').then(() => Fun());
 			stop = false;
 		}
 		generate();
