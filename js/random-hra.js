@@ -25,10 +25,8 @@ var modal = document.getElementById('myModal');
 var svg = $('#nextround');
 svg.hide();
 
-var msg;
 var gmfld = $('#gamefield');
 var gameover = document.getElementById('gameover');
-var nextround = document.getElementById('nextround');
 var stop = true;
 var logoCode = "<img src='assets/img/logo.png' width='100%' height='100%'>";
 var overTxt;
@@ -47,19 +45,6 @@ var rndDir;
 var enemyCountDownSec = 0;
 var rndDirSec;
 
-function muteMe(elem) {
-	elem.muted = true;
-	elem.pause();
-}
-
-// Try to mute all video and audio elements on the page
-function mutePage() {
-	var elems = document.querySelectorAll("video, audio");
-
-	[].forEach.call(elems, function (elem) {
-		muteMe(elem);
-	});
-}
 if (localStorage.mute !== "true") {
 	var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
 	var point = new Audio('./assets/sounds/Laser_Gun.wav');
@@ -146,7 +131,7 @@ $(document).ready(function () {
 					if (score > highscore) {
 						localStorage.setItem('highscore', score);
 						alert('You have a new highscore: ' + score + ' your previous highscore was: ' + highscore);
-					} else {}
+					}
 				} else {
 					localStorage.setItem('highscore', score);
 				}
@@ -155,7 +140,7 @@ $(document).ready(function () {
 	})();
 
 	function ProgressCountdown(timeleft, bar, text) {
-		return new Promise((resolve, reject) => {
+		return new Promise((resolve) => {
 			var countdownTimer = setInterval(() => {
 				timeleft--;
 
@@ -178,7 +163,7 @@ $(document).ready(function () {
 				rndhra.pressedKeys[KEY.RIGHT]) &&
 			stop
 		) {
-			ProgressCountdown(gameTime, 'pageBeginCountdown', 'pageBeginCountdownText').then((value) => Fun());
+			ProgressCountdown(gameTime, 'pageBeginCountdown', 'pageBeginCountdownText').then(() => Fun());
 			stop = false;
 		}
 		generate();
@@ -391,9 +376,7 @@ $(document).ready(function () {
 		}
 	}
 }); //konec funkce document.ready v jQuery
-function refresh() {
-	window.location = window.location;
-}
+
 // Theme switch
 
 initTheme(); // if user has already selected a specific theme -> apply it
