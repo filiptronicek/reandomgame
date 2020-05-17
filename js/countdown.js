@@ -1,10 +1,3 @@
-function toggleDarkLight() {
-    var body = document.getElementById('body');
-    var currentClass = body.className;
-    body.className = currentClass == 'dark-mode' ? 'light-mode' : 'dark-mode';
-}
-
-
 // Set the date we're counting down to
 //var countDownDate = new Date('Aug 5, 2018 21:20').getTime();
 var countDownDate = new Date('May 26, 2019 21:20').getTime();
