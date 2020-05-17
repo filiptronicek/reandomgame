@@ -47,19 +47,6 @@ var rndDir;
 var enemyCountDownSec = 0;
 var rndDirSec;
 
-function muteMe(elem) {
-	elem.muted = true;
-	elem.pause();
-}
-
-// Try to mute all video and audio elements on the page
-function mutePage() {
-	var elems = document.querySelectorAll("video, audio");
-
-	[].forEach.call(elems, function (elem) {
-		muteMe(elem);
-	});
-}
 if (localStorage.mute !== "true") {
 	var gameoversound = new Audio('./assets/sounds/Game over.flac'); // buffers automatically when created
 	var point = new Audio('./assets/sounds/Laser_Gun.wav');
