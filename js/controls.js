@@ -62,7 +62,7 @@
         }
 
         var keyboard = document.querySelector('.keyboard');
-        window.addEventListener('resize', function (e) {
+        window.addEventListener('resize', function () {
             size();
         });
         size();
