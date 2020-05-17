@@ -391,9 +391,7 @@ $(document).ready(function () {
 		}
 	}
 }); //konec funkce document.ready v jQuery
-function refresh() {
-	window.location = window.location;
-}
+
 // Theme switch
 
 initTheme(); // if user has already selected a specific theme -> apply it
