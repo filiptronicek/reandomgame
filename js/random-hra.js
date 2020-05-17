@@ -155,7 +155,7 @@ $(document).ready(function () {
 	})();
 
 	function ProgressCountdown(timeleft, bar, text) {
-		return new Promise((resolve, reject) => {
+		return new Promise((resolve) => {
 			var countdownTimer = setInterval(() => {
 				timeleft--;
 
