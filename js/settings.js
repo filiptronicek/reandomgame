@@ -44,7 +44,7 @@ function saveSettings(checkbox, setting) {
 var themeSwitch = document.getElementById("themeSwitch");
 if (themeSwitch) {
   initTheme(); // if user has already selected a specific theme -> apply it
-  themeSwitch.addEventListener("change", function (event) {
+  themeSwitch.addEventListener("change", function () {
     resetTheme(); // update color theme
   });
 }
