@@ -264,9 +264,6 @@ $(document).ready(function () {
 		var hracLeft = parseInt($('#hrac').css('left'));
 		var hracTop = parseInt($('#hrac').css('top'));
 
-		var playgroundHeight = parseInt($('#playground').css('height'));
-		var playgroundWidth = parseInt($('#playground').css('width'));
-
 		if (
 			Math.abs(hracLeft + hracHeight - (enemysecondLeft + enemysecondHeight)) <= enemysecondHeight + hracHeight &&
 			Math.abs(hracTop + hracHeight - (enemysecondTop + enemysecondHeight)) <= enemysecondHeight + hracHeight
