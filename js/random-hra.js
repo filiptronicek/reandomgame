@@ -146,7 +146,7 @@ $(document).ready(function () {
 					if (score > highscore) {
 						localStorage.setItem('highscore', score);
 						alert('You have a new highscore: ' + score + ' your previous highscore was: ' + highscore);
-					} else {}
+					}
 				} else {
 					localStorage.setItem('highscore', score);
 				}
