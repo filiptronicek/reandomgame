@@ -25,10 +25,8 @@ var modal = document.getElementById('myModal');
 var svg = $('#nextround');
 svg.hide();
 
-var msg;
 var gmfld = $('#gamefield');
 var gameover = document.getElementById('gameover');
-var nextround = document.getElementById('nextround');
 var stop = true;
 var logoCode = "<img src='assets/img/logo.png' width='100%' height='100%'>";
 var overTxt;
