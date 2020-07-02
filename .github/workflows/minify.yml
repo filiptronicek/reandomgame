@@ -21,7 +21,8 @@ jobs:
 
       - name: Auto Minify
         uses: nizarmah/auto-minify@master
-
+        with:
+          directory: 'js'
       # Auto commits minified files to the repository
       - uses: mikeal/publish-to-github-action@master
         env:
