@@ -1,4 +1,5 @@
 # rEAndomgame
 ### A simple game built with jQuery & BootStrap
 #### Controls:   
-![controls picture](https://i.ibb.co/hWdvN3m/Screenshot-2019-05-25-Ovl-d-n-hry-r-EAndom-game.png)
+
+![game controls](https://user-images.githubusercontent.com/29888641/166903444-e34330b2-fdcd-44d4-a601-0b5f08ce77cf.png)
